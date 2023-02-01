@@ -39,9 +39,11 @@ class CategoryCrudController extends CrudController
      */
     protected function setupListOperation()
     {
-
+        $this->crud->addButtonFromModelFunction('line', 'Articles', 'getArticles', 'beginning');
+        $this->setupFilters();
+        $this->crud->enableExportButtons();
         CRUD::column('title');
-        CRUD::column('description')->type('text')->escaped(false);
+        CRUD::column('description')->type('text');
 
         CRUD::column('created_at')->type('datetime');
         /**
@@ -52,7 +54,7 @@ class CategoryCrudController extends CrudController
     }
     protected function setupShowOperation(){
         CRUD::column('title');
-        CRUD::column('description')->type('text')->escaped(false);
+        CRUD::column('description')->type('text');
 
         CRUD::column('created_at')->type('datetime');
     }
@@ -66,7 +68,7 @@ class CategoryCrudController extends CrudController
     {
         CRUD::setValidation(\Rainbow1997\Testback\Http\Requests\CategoryRequest::class);
         CRUD::field('title');
-        CRUD::field('description')->type('summernote');
+        CRUD::field('description')->type('textarea');
 
         CRUD::field('created_at')->type('datetime');
 
@@ -84,6 +86,29 @@ class CategoryCrudController extends CrudController
      * @see https://backpackforlaravel.com/docs/crud-operation-update
      * @return void
      */
+    protected function setupFilters()
+    {
+
+        $this->crud->addFilter(
+            [ // daterange filter
+                'type' => 'date_range',
+                'name' => 'date_range',
+                'label' => 'Date range',
+                // 'date_range_options' => [
+                'format' => 'YYYY-MM-DD',
+                'locale' => ['format' => 'YYYY-MM-DD'],
+                // 'showDropdowns' => true,
+                // 'showWeekNumbers' => true
+                // ]
+            ],
+            false,
+            function ($value) { // if the filter is active, apply these constraints
+                $dates = json_decode($value);
+                $this->crud->addClause('where', 'created_at', '>=', $dates->from);
+                $this->crud->addClause('where', 'created_at', '<=', $dates->to);
+            }
+        );
+    }
     protected function setupUpdateOperation()
     {
         $this->setupCreateOperation();

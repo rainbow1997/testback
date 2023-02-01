@@ -14,13 +14,13 @@
  * User Routes
  */
 
-// Route::group([
-//     'middleware'=> array_merge(
-//     	(array) config('backpack.base.web_middleware', 'web'),
-//     ),
-// ], function() {
-//     Route::get('something/action', \Rainbow1997\Testback\Http\Controllers\SomethingController::actionName());
-// });
+ Route::group([
+     'middleware'=> array_merge(
+     	(array) config('backpack.base.web_middleware', 'web'),
+     ),
+ ], function() {
+     Route::post('category-search', [\Rainbow1997\Testback\Http\Controllers\ArticleController::class,'categorySearch'])->name('categorySearch');
+ });
 
 
 /**

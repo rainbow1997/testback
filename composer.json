@@ -13,10 +13,19 @@
     "keywords": [
         "Laravel", "Backpack", "Backpack for Laravel", "Backpack Addon", "Testback"
     ],
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://repo.backpackforlaravel.com/"
+        }
+    ],
     "require": {
         "illuminate/support": "~8|~9",
-        "backpack/crud": "^5.4"
+        "backpack/crud": "^5.4",
+        "backpack/editable-columns": "^2.0",
+        "backpack/pro": "^1.2"
     },
+
     "require-dev": {
         "phpunit/phpunit": "~9.0",
         "orchestra/testbench": "~5|~6"

@@ -2,7 +2,7 @@
 
 namespace Rainbow1997\Testback\Http\Controllers;
 
-use \Rainbow1997\Testback\Http\Requests\ArticleRequest;
+use  \Rainbow1997\Testback\Http\Requests\ArticleRequest;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
 
@@ -70,7 +70,7 @@ class ArticleCrudController extends CrudController
 
             'entity'    => 'category',
 
-            'model'     => "App\Models\Category",
+            'model'     => \Rainbow1997\Testback\Models\Category::class,
             'attribute' => 'title',
             ]);
         CRUD::field('content')->type('summernote');

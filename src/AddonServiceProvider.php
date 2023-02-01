@@ -1,6 +1,6 @@
 <?php
 
-namespace Jamali\Testback;
+namespace Rainbow1997\Testback;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -8,7 +8,7 @@ class AddonServiceProvider extends ServiceProvider
 {
     use AutomaticServiceProvider;
 
-    protected $vendorName = 'jamali';
+    protected $vendorName = 'rainbow1997';
     protected $packageName = 'testback';
     protected $commands = [];
     public function boot()

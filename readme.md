@@ -19,7 +19,7 @@ More exactly, it adds Articles and Categories so that you can easily do content 
 Via Composer
 
 ``` bash
-composer require jamali/testback
+composer require rainbow1997/testback
 ```
 
 ## Usage
@@ -42,7 +42,7 @@ If you need to change the field in any way, you can easily publish the file to y
 mkdir -p resources/views/vendor/backpack/crud/fields
 
 # copy the blade file inside the folder we created above
-cp -i vendor/jamali/testback/src/resources/views/fields/field_name.blade.php resources/views/vendor/backpack/crud/fields/field_name.blade.php
+cp -i vendor/rainbow1997/testback/src/resources/views/fields/field_name.blade.php resources/views/vendor/backpack/crud/fields/field_name.blade.php
 ```
 
 **Step 2.** Remove the vendor namespace wherever you've used the field:
@@ -51,18 +51,18 @@ $this->crud->addField([
     'name' => 'agreed',
     'type' => 'toggle',
     'label' => 'I agree to the terms and conditions',
--   'view_namespace' => 'jamali.testback::fields'
+-   'view_namespace' => 'rainbow1997.testback::fields'
 ]);
 ```
 
 **Step 3.** Uninstall this package. Since it only provides one file, and you're no longer using that file, it makes no sense to have the package installed:
 ```bash
-composer remove jamali/testback
+composer remove rainbow1997/testback
 ```
 
 ## Change log
 
-Changes are documented here on Github. Please see the [Releases tab](https://github.com/jamali/testback/releases).
+Changes are documented here on Github. Please see the [Releases tab](https://github.com/rainbow1997/testback/releases).
 
 ## Testing
 
@@ -90,10 +90,10 @@ This project was released under MIT, so you can install it on top of any Backpac
 However, please note that you do need Backpack installed, so you need to also abide by its [YUMMY License](https://github.com/Laravel-Backpack/CRUD/blob/master/LICENSE.md). That means in production you'll need a Backpack license code. You can get a free one for non-commercial use (or a paid one for commercial use) on [backpackforlaravel.com](https://backpackforlaravel.com).
 
 
-[ico-version]: https://img.shields.io/packagist/v/jamali/testback.svg?style=flat-square
-[ico-downloads]: https://img.shields.io/packagist/dt/jamali/testback.svg?style=flat-square
+[ico-version]: https://img.shields.io/packagist/v/rainbow1997/testback.svg?style=flat-square
+[ico-downloads]: https://img.shields.io/packagist/dt/rainbow1997/testback.svg?style=flat-square
 
-[link-packagist]: https://packagist.org/packages/jamali/testback
-[link-downloads]: https://packagist.org/packages/jamali/testback
-[link-author]: https://github.com/jamali
+[link-packagist]: https://packagist.org/packages/rainbow1997/testback
+[link-downloads]: https://packagist.org/packages/rainbow1997/testback
+[link-author]: https://github.com/rainbow1997
 [link-contributors]: ../../contributors

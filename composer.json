@@ -23,12 +23,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Jamali\\Testback\\": "src/"
+            "Rainbow1997\\Testback\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Jamali\\Testback\\Tests\\": "tests"
+            "Rainbow1997\\Testback\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -37,7 +37,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Jamali\\Testback\\AddonServiceProvider"
+                "Rainbow1997\\Testback\\AddonServiceProvider"
             ]
         }
     }

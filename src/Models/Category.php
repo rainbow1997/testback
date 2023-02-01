@@ -1,6 +1,6 @@
 <?php
 
-namespace Jamali\Testback\Models;
+namespace Rainbow1997\Testback\Models;
 
 use Backpack\CRUD\app\Models\Traits\CrudTrait;
 use Illuminate\Database\Eloquent\Factories\HasFactory;

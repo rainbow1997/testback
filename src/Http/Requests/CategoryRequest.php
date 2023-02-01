@@ -1,6 +1,6 @@
 <?php
 
-namespace Jamali\Testback\Http\Requests;
+namespace Rainbow1997\Testback\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 

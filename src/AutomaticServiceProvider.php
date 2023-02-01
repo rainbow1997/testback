@@ -1,6 +1,6 @@
 <?php
 
-namespace Jamali\Testback;
+namespace Rainbow1997\Testback;
 
 use Backpack\CRUD\ViewNamespaces;
 

@@ -1,8 +1,8 @@
 <?php
 
-namespace Jamali\Testback\Http\Controllers;
+namespace Rainbow1997\Testback\Http\Controllers;
 
-use \Jamali\Testback\Http\Requests\ArticleRequest;
+use \Rainbow1997\Testback\Http\Requests\ArticleRequest;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
 
@@ -26,7 +26,7 @@ class ArticleCrudController extends CrudController
      */
     public function setup()
     {
-        CRUD::setModel(\Jamali\Testback\Models\Article::class);
+        CRUD::setModel(\Rainbow1997\Testback\Models\Article::class);
         CRUD::setRoute(config('backpack.base.route_prefix') . '/article');
         CRUD::setEntityNameStrings('article', 'articles');
     }
@@ -60,7 +60,7 @@ class ArticleCrudController extends CrudController
      */
     protected function setupCreateOperation()
     {
-        CRUD::setValidation(\Jamali\Testback\Http\Requests\ArticleRequest::class);
+        CRUD::setValidation(\Rainbow1997\Testback\Http\Requests\ArticleRequest::class);
         CRUD::field('title');
         CRUD::field('description');
         CRUD::addField([

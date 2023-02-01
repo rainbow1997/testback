@@ -24,9 +24,21 @@ composer require rainbow1997/testback
 
 ## Usage
 
-> **// TODO: explain to your users how to use the functionality** this package provides; 
-> we've provided an example for a Backpack addon that provides a custom field
+> Notice: You have to follow these operations:
 
+After installation you should add these lines into your resources/vendor/backpack/base/inc/sidebar_content.blade.php file. 
+If you don't have it you should copy it 
+from vendor/backpack/crud/src/resources/views/base/inc/sidebar_content like:
+```bash
+cd /path/to/your/laravel
+cp ./vendor/backpack/crud/src/resources/views/base/inc/sidebar.blade.php ./resources/views/vendor/backpack/base/inc/sidebar_content.blade.php
+```
+codes you should add :
+```html
+            <li class="nav-item"><a class="nav-link" href="{{ backpack_url('article') }}"><i class="nav-icon la la-magic"></i> Articles</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{ backpack_url('category') }}"><i class="nav-icon la la-magic"></i> Categories</a></li>
+
+```
 After install the package you can show your managing part in backpack admin panel.
 
 

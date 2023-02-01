@@ -19,7 +19,7 @@ More exactly, it adds Articles and Categories so that you can easily do content 
 Via Composer
 
 ``` bash
-composer require rainbow1997/testback
+composer require rainbow1997/testback --prefer-source
 ```
 
 ## Usage

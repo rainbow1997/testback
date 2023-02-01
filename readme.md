@@ -32,7 +32,7 @@ If you don't have it you should copy it
 from vendor/backpack/crud/src/resources/views/base/inc/sidebar_content like:
 ```bash
 cd /path/to/your/laravel
-cp ./vendor/backpack/crud/src/resources/views/base/inc/sidebar.blade.php ./resources/views/vendor/backpack/base/inc/sidebar_content.blade.php
+cp ./vendor/backpack/crud/src/resources/views/base/inc/sidebar_content.blade.php ./resources/views/vendor/backpack/base/inc/sidebar_content.blade.php
 ```
 codes you should add :
 ```html

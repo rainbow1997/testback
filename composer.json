@@ -1,0 +1,44 @@
+{
+    "name": "jamali/testback",
+    "description": "A test package for using backpack addons",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mostafa Jamali",
+            "email": "m.jamali@dornica.net",
+            "homepage": "https://dornica.net"
+        }
+    ],
+    "homepage": "https://github.com/jamali/testback",
+    "keywords": [
+        "Laravel", "Backpack", "Backpack for Laravel", "Backpack Addon", "Testback"
+    ],
+    "require": {
+        "illuminate/support": "~8|~9",
+        "backpack/crud": "^5.4"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~9.0",
+        "orchestra/testbench": "~5|~6"
+    },
+    "autoload": {
+        "psr-4": {
+            "Jamali\\Testback\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Jamali\\Testback\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit --testdox"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Jamali\\Testback\\AddonServiceProvider"
+            ]
+        }
+    }
+}

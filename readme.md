@@ -20,6 +20,7 @@ Via Composer
 
 ``` bash
 composer require rainbow1997/testback --prefer-source
+php artisan migrate
 ```
 
 ## Usage

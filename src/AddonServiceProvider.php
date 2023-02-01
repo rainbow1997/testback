@@ -11,7 +11,5 @@ class AddonServiceProvider extends ServiceProvider
     protected $vendorName = 'rainbow1997';
     protected $packageName = 'testback';
     protected $commands = [];
-    public function boot()
-    {
-    }
+
 }

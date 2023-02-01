@@ -4,20 +4,12 @@
 [![Total Downloads][ico-downloads]][link-downloads]
 [![The Whole Fruit Manifesto](https://img.shields.io/badge/writing%20standard-the%20whole%20fruit-brightgreen)](https://github.com/the-whole-fruit/manifesto)
 
-> **// TODO: customize this description and delete this line**
 
-This package provides XXX functionality for projects that use the [Backpack for Laravel](https://backpackforlaravel.com/) administration panel. 
+This package provides articles functionality for projects that use the [Backpack for Laravel](https://backpackforlaravel.com/) administration panel. 
 
-More exactly, it adds X and Y so that you can easily do Z.
+More exactly, it adds Articles and Categories so that you can easily do content managing.
 
 
-## Screenshots
-
-> **// TODO: add a screenshot and delete these lines;** 
-> to add a screenshot to a github markdown file, the easiest way is to
-> open an issue, upload the screenshot there with drag&drop, then close the issue;
-> you now have that image hosted on Github's servers; so you can then right-click 
-> the image to copy its URL, and use that URL wherever you want (for example... here)
 
 ![Backpack Toggle Field Addon](https://via.placeholder.com/600x250?text=screenshot+needed)
 
@@ -35,24 +27,12 @@ composer require jamali/testback
 > **// TODO: explain to your users how to use the functionality** this package provides; 
 > we've provided an example for a Backpack addon that provides a custom field
 
-To use the field this package provides, inside your custom CrudController do:
+After install the package you can show your managing part in backpack admin panel.
 
-```php
-$this->crud->addField([
-    'name' => 'agreed',
-    'label' => 'I agree to the terms and conditions',
-    'type' => 'new_field_name',
-    'view_namespace' => 'jamali.testback::fields',
-]);
-```
-
-Notice the ```view_namespace``` attribute - make sure that is exactly as above, to tell Backpack to load the field from this _addon package_, instead of assuming it's inside the _Backpack\CRUD package_.
 
 
 ## Overwriting
 
-> **// TODO: explain to your users how to overwrite the functionality this package provides;**
-> we've provided an example for a custom field
 
 If you need to change the field in any way, you can easily publish the file to your app, and modify that file any way you want. But please keep in mind that you will not be getting any updates.
 

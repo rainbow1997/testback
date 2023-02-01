@@ -27,12 +27,14 @@
  * Admin Routes
  */
 
-// Route::group([
-//     'prefix' => config('backpack.base.route_prefix', 'admin'),
-//     'middleware' => array_merge(
-//         (array) config('backpack.base.web_middleware', 'web'),
-//         (array) config('backpack.base.middleware_key', 'admin')
-//     ),
-// ], function () {
+ Route::group([
+     'prefix' => config('backpack.base.route_prefix', 'admin'),
+     'middleware' => array_merge(
+         (array) config('backpack.base.web_middleware', 'web'),
+         (array) config('backpack.base.middleware_key', 'admin')
+     ),
+ ], function () {
 //     Route::crud('some-entity-name', \Jamali\Testback\Http\Controllers\Admin\EntityNameCrudController::class);
-// });
+     Route::crud('article', \Jamali\Testback\Http\Controllers\ArticleCrudController::class);
+     Route::crud('category', \Jamali\Testback\Http\Controllers\CategoryCrudController::class);
+ });

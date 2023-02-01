@@ -1,5 +1,5 @@
 {
-    "name": "jamali/testback",
+    "name": "rainbow1997/testback",
     "description": "A test package for using backpack addons",
     "license": "MIT",
     "authors": [
@@ -9,7 +9,7 @@
             "homepage": "https://dornica.net"
         }
     ],
-    "homepage": "https://github.com/jamali/testback",
+    "homepage": "https://github.com/rainbow1997/testback",
     "keywords": [
         "Laravel", "Backpack", "Backpack for Laravel", "Backpack Addon", "Testback"
     ],

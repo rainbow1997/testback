@@ -11,8 +11,7 @@ More exactly, it adds Articles and Categories so that you can easily do content 
 
 
 
-![Backpack Toggle Field Addon](https://via.placeholder.com/600x250?text=screenshot+needed)
-
+[![screen.png](https://i.postimg.cc/BZVYVRHd/screen.png)](https://postimg.cc/5j8SH7P3)
 
 ## Installation
 

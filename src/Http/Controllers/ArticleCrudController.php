@@ -39,6 +39,8 @@ class ArticleCrudController extends CrudController
      */
     protected function setupListOperation()
     {
+        $this->crud->addButtonFromModelFunction('line', 'Comments', 'getComments', 'beginning');
+
         $this->setupFilters();
         $this->crud->enableExportButtons();
 
@@ -90,8 +92,40 @@ class ArticleCrudController extends CrudController
             'model'     => \Rainbow1997\Testback\Models\Category::class,
             'attribute' => 'title',
             ]);
+        CRUD::addField(
+        [   // Text
+            'name'  => 'slug',
+            'target'  => 'title', // will turn the title input into a slug
+            'label' => "Slug",
+            'type'  => 'slug',
+
+            // optional
+            //'prefix'     => '',
+            //'suffix'     => '',
+            //'default'    => 'some value', // default value
+            //'hint'       => 'Some hint text', // helpful text, show up after input
+            //'attributes' => [
+            //'placeholder' => 'Some text when empty',
+            //'class' => 'form-control some-class',
+            //'readonly'  => 'readonly',
+            //'disabled'  => 'disabled',
+            //], // extra HTML attributes and values your input might need
+            //'wrapper'   => [
+            //'class' => 'form-group col-md-12'
+            //], // extra HTML attributes for the field wrapper - mostly for resizing fields
+
+        ]);
+
         CRUD::field('content')->type('tinymce');
-        CRUD::field('created_at')->type('datetime');
+        $this->crud->addField([
+            'label'        => "Post Image",
+            'name'         => "image",
+            'filename'     => "image_filename", // set to null if not needed
+            'type'         => 'browse_multiple',
+            'aspect_ratio' => 1, // set to 0 to allow any aspect ratio
+            'crop'         => true, // set to true to allow cropping, false to disable
+            'src'          => NULL, // null to read straight from DB, otherwise set to model accessor function
+        ]);
 
 
         /**

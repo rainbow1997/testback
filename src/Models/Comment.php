@@ -2,11 +2,11 @@
 
 namespace Rainbow1997\Testback\Models;
 
+use App\Models\User;
 use Backpack\CRUD\app\Models\Traits\CrudTrait;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-
-class Category extends Model
+class Comment extends Model
 {
     use CrudTrait;
     use HasFactory;
@@ -17,11 +17,11 @@ class Category extends Model
     |--------------------------------------------------------------------------
     */
 
-    protected $table = 'categories';
+    protected $table = 'comments';
     // protected $primaryKey = 'id';
     // public $timestamps = false;
     protected $guarded = ['id'];
-    protected $fillable = ['title', 'description'];
+    protected $fillable = ['fullname', 'content', 'commentable_type', 'commentable_id', 'user_id'];
     // protected $hidden = [];
     // protected $dates = [];
 
@@ -30,28 +30,24 @@ class Category extends Model
     | FUNCTIONS
     |--------------------------------------------------------------------------
     */
-        public function getBackpackUrl()
-        {
-            return backpack_url('category');
-        }
+    public function getTarget()
+    {
+        $target = $this->commentable;
+        return '<a class="btn btn-sm btn-link" target="_blank" href="' . $target->getBackpackUrl() .'/' . $this->id . '/show" data-toggle="tooltip" title="See the target of the content."><i class="la la-list"></i> Target</a>';
+
+    }
     /*
     |--------------------------------------------------------------------------
     | RELATIONS
     |--------------------------------------------------------------------------
     */
-    public function articles()
+    public function user()
     {
-        return $this->hasMany(Article::class);
+        return $this->belongsTo(User::class);
     }
-
-    public function getArticles()
+    public function commentable()
     {
-        return '<a class="btn btn-sm btn-link" target="_blank" href="' . backpack_url('article') . '/?categoryFilter=' . $this->id . '" data-toggle="tooltip" title="See the articles of the category."><i class="la la-list"></i> Articles</a>';
-
-    }
-    public function images()
-    {
-        return $this->morphMany(Image::class,'imageable');
+        return $this->morphTo();
     }
     /*
     |--------------------------------------------------------------------------

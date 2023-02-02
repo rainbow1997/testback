@@ -23,7 +23,9 @@
         "illuminate/support": "~8|~9",
         "backpack/crud": "^5.4",
         "backpack/editable-columns": "^2.0",
-        "backpack/pro": "^1.2"
+        "backpack/pro": "^1.2",
+        "intervention/image" : "^2.7",
+        "backpack/filemanager": "^2.0"
     },
 
     "require-dev": {

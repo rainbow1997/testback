@@ -38,7 +38,8 @@ codes you should add :
 ```html
             <li class="nav-item"><a class="nav-link" href="{{ backpack_url('article') }}"><i class="nav-icon la la-magic"></i> Articles</a></li>
             <li class="nav-item"><a class="nav-link" href="{{ backpack_url('category') }}"><i class="nav-icon la la-magic"></i> Categories</a></li>
-
+<li class="nav-item"><a class="nav-link" href="{{ backpack_url('comment') }}"><i class="nav-icon la la-magic"></i> Comments</a></li>
+<li class="nav-item"><a class="nav-link" href="{{ backpack_url('elfinder') }}"><i class="nav-icon la la-files-o"></i> <span>{{ trans('backpack::crud.file_manager') }}</span></a></li>
 ```
 After install the package you can show your managing part in backpack admin panel.
 
